@@ -132,8 +132,10 @@ function draw(){
     // Game over
     if(snakeX < box || snakeX > 17*box || snakeY < 3*box || snakeY > 15*box || collision(newhead,snake)){
 
+        ctx.fillStyle = "red";
+        ctx.font = "45px changa one";
+        ctx.fillText("*** GAME OVER !! *** \n ",2*box, 5*box)
         clearInterval(game);
-        //alert("GAME OVER !!!!!!!");
     }
 
     // add new snake head
